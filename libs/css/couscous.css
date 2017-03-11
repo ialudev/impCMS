@@ -1,0 +1,48 @@
+#mainpage {
+	background-color:white;
+	-webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+#page-size {
+	width: 1200px;
+	height: auto;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+.test3 {
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    outline: 0;
+}
+
+@media (min-width: 1200px){
+
+#page-size {
+	width: 1200px;
+	height: auto;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+
+}
+
+
+@media (max-width: 900px){
+
+	#page-size {
+	width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-right:auto;
+}
+
+
+}
