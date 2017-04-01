@@ -1,7 +1,5 @@
 # Imperial**Creativity** CMS
 
-> developer note
-
 > going to finish the cms within 1 Week
 
 #### Already done:
@@ -25,7 +23,7 @@
 + Bootstrap 
 + MySql / PDO (Not MySqli)
 
-#### useful links:
+#### Useful links:
 
 http://getbootstrap.com/
 
