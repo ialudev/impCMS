@@ -1,1 +1,2 @@
-# IMP CMS
+# Imperial**Creativity** Content Management System
+
