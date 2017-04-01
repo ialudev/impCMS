@@ -1,7 +1,8 @@
 # Imperial**Creativity** CMS
 
-> developer note.
-> going to finish the cms within 1 Week.
+> developer note
+
+> going to finish the cms within 1 Week
 
 #### Already done:
 
@@ -25,8 +26,11 @@
 + MySql / PDO (Not MySqli)
 
 #### useful links:
--- http://getbootstrap.com/.
--- https://code.tutsplus.com/tutorials/why-you-should-be-using-phps-pdo-for-database-access--net-12059.
--- https://www.tutorialspoint.com/php7/php7_introduction.htm.
+
+http://getbootstrap.com/
+
+https://code.tutsplus.com/tutorials/why-you-should-be-using-phps-pdo-for-database-access--net-12059
+
+https://www.tutorialspoint.com/php7/php7_introduction.htm
 
 
