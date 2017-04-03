@@ -9,7 +9,7 @@ try {
 	$db_host = "localhost";
 	$db_name = "database";
 	$db_user = "root";
-	$db_password = "password";
+	$db_password = "root";
     
     $db = new PDO('mysql:host='.$db_host.';dbname='.$db_name.';', $db_user, $db_password, array(\PDO::MYSQL_ATTR_INIT_COMMAND =>  'SET NAMES utf8') );
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -17,11 +17,13 @@ try {
 
 } catch(PDOException $e) {
 
-	// Show error page
+	// if database connection fail = show error page
     
     include_once("views/_sqlerror.php");
     die();
 }
+
+include("classes/usage.php");
 
 
 ?>
