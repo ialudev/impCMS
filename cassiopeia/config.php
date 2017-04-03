@@ -1,4 +1,6 @@
 <?php
+ob_start();
+session_start();
 
 try {
 
@@ -22,7 +24,8 @@ try {
     include_once("views/_sqlerror.php");
     die();
 }
-
+include("classes/user.php");
+$user = new User($db);
 include("classes/usage.php");
 
 
