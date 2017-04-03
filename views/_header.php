@@ -99,11 +99,16 @@ if ($login->isUserLoggedIn() == true) {
 <ul class="navbar-nav">
       <li class="nav-item dropdown active">
         <a class="nav-link dropdown-toggle" href="index.php" id="userProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <?php echo htmlspecialchars($_SESSION['user_name']); ?>
+          <?php echo htmlspecialchars($_SESSION['user_email']); ?>
         </a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userProfile">
-          <a class="dropdown-item" href="index.php?logout"><?php echo WORDING_LOGOUT; ?></a>
-          <a class="dropdown-item" href="edit.php"><?php echo WORDING_EDIT_USER_DATA; ?></a>
+        <a class="dropdown-item" style="padding: 6px 12px 6px 12px;" href=""><i class="fa fa-shopping-cart fa-fw" aria-hidden="true"></i>&nbsp; <?php echo WORDING_USER_CART_MENU; ?> <span class="badge badge-pill badge-danger">5</span></a>
+        <div class="dropdown-divider" style="margin:0px;"></div>
+          <a class="dropdown-item" style="padding: 6px 12px 6px 12px;" href=""><i class="fa fa-truck fa-fw" aria-hidden="true"></i>&nbsp; <?php echo WORDING_USER_ORDERS_MENU; ?></a>
+          <div class="dropdown-divider" style="margin:0px;"></div>
+          <a class="dropdown-item" style="padding: 6px 12px 6px 12px;" href="edit.php"><i class="fa fa-cog fa-fw" aria-hidden="true"></i>&nbsp; <?php echo WORDING_EDIT_USER_DATA; ?></a>
+          <div class="dropdown-divider" style="margin:0px;"></div>
+          <a class="dropdown-item" style="padding: 6px 12px 6px 12px;" href="index.php?logout"><i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>&nbsp; <?php echo WORDING_LOGOUT; ?></a>
         </div>
       </li>
     </ul>
@@ -159,12 +164,12 @@ Sign in<span class="sr-only">(current)</span></a>
 if (isset($login)) {
     if ($login->errors) {
         foreach ($login->errors as $error) {
-            echo '<div class="container-fluid"><div class="alert alert-danger" role="alert">'.$error.'</div></div>';
+            echo '<div id="page-size"><div class="container"><div class="alert alert-danger" role="alert">'.$error.'</div></div></div>';
         }
     }
     if ($login->messages) {
         foreach ($login->messages as $message) {
-            echo '<div class="container-fluid"><div class="alert alert-danger" role="alert">'.$message.'</div></div>';
+            echo '<div id="page-size"><div class="container"><div class="alert alert-danger" role="alert">'.$message.'</div></div></div>';
         }
     }
 }

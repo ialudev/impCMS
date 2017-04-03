@@ -9,11 +9,23 @@
 <?php if (!$registration->registration_successful && !$registration->verification_successful) { ?>
 <form method="post" action="register.php" name="registerform">
 
-
+     <div class="form-group">
+        <label for="user_name_first">Your Name</label>
+         <div class="input-group">
+         <div class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i>
+</div>
 <input id="first_name" class="form-control" type="text" name="first_name" placeholder="first name">
+ </div>
+      </div>
 
-<input id="last_name" class="form-control" type="text" name="last_name"  placeholder="last name">
-
+<div class="form-group">
+         <div class="input-group">
+         <div class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i>
+</div>
+<input id="last_name" class="form-control" type="text" name="last_name" required aria-describedby="usernameHELP"  placeholder="last name">
+        </div>
+        <small id="usernameHELP" class="form-text text-muted">Your accountname will be automatically generated based on your first and last name</small>
+      </div>
 
      <div class="form-group">
         <label for="user_email"><?php echo WORDING_REGISTRATION_EMAIL; ?></label>

@@ -65,7 +65,7 @@ define("EMAIL_USE_SMTP", true);
 define("EMAIL_SMTP_HOST", "ssl://smtp.gmail.com");
 define("EMAIL_SMTP_AUTH", true);
 define("EMAIL_SMTP_USERNAME", "daraz.leon@gmail.com");
-define("EMAIL_SMTP_PASSWORD", "password");
+define("EMAIL_SMTP_PASSWORD", "Ax456ocd-z4");
 define("EMAIL_SMTP_PORT", 465);
 define("EMAIL_SMTP_ENCRYPTION", "ssl");
 

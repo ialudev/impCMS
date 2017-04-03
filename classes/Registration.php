@@ -82,8 +82,9 @@ class Registration
     {
         // we just remove extra space on username and email
         $testo = $_POST['first_name'];
-        $randi = rand(10,100);
-        $user_name = $testo . $randi;
+        $testo2 = $_POST['last_name'];
+        $randi = rand(100,1000);
+        $user_name = ''.$testo.''.$testo2.''.$randi.'';
         $user_email = trim($user_email);
 
         // check provided data validity
