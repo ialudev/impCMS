@@ -11,4 +11,40 @@
 		return $abfr->$info;
 	}
 
+	function admincheck($username) {
+		global $db;
+
+		$sql = $db ->prepare("SELECT * FROM members WHERE username = :username");
+		$sql -> bindParam(":username", $username);
+		$sql -> execute();
+
+		$info_ad = $sql->fetch(PDO::FETCH_OBJ);
+
+		return $info_ad->rank;
+	}
+
+	function userdata($username, $data) {
+		global $db;
+
+		$sql = $db -> prepare("SELECT * FROM members WHERE username = :username");
+		$sql -> bindParam(":username", $username);
+		$sql -> execute();
+
+		$userinfo = $sql->fetch(PDO::FETCH_OBJ);
+
+		return $userinfo->$data;
+	}
+
+	function userrank($username) {
+		global $db;
+
+		$sql = $db -> prepare("SELECT * FROM members WHERE username = :username");
+		$sql -> bindParam(":username", $username);
+		$sql -> execute();
+
+		$userinfo = $sql->fetch(PDO::FETCH_OBJ);
+
+		if($userinfo->rank == 7) { echo 'Administrator'; }
+	}
+
 ?>

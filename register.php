@@ -7,7 +7,6 @@ include("views/_header.php");
 <!-- Content 1 -->
 <?php
 
-
 if(isset($_POST['submit'])){
 
 	if(isset($_POST['g-recaptcha-response']))
@@ -105,6 +104,8 @@ if(isset($_POST['submit'])){
 
 ?>
 
+<?php if(!$user->is_logged_in() ) { ?>
+zre
 			<form role="form" method="post" action="" autocomplete="off">
 
 				<?php
@@ -146,6 +147,9 @@ if(isset($_POST['submit'])){
 
 			</form>
 
+<?php } else {
+	echo 'logged in';
+	} ?>
 
 <?php
 include("views/_footer.php");
