@@ -10,10 +10,11 @@ include("cassiopeia/config.php");
 <!--Import Google Icon Font-->
 <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <!--Import materialize.css-->
-<link type="text/css" rel="stylesheet" href="library/libs/css/materialize.min.css"  media="screen,projection"/>
+<link type="text/css" rel="stylesheet" href="library/libs/css/materialize-tags.min.css"/>
 <link type="text/css" rel="stylesheet" href="library/style.css"/>
-<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="library/libs/js/materialize.min.js"></script>
+<link type="text/css" rel="stylesheet" href="library/libs/css/materialize.min.css"  media="screen,projection"/>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
 
 <!--Let browser know website is optimized for mobile-->
  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -46,7 +47,11 @@ if(admincheck($_SESSION['username']) == 7) {
 
 ?>	
 
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.10.4/typeahead.bundle.min.js"></script>
 
+<script type="text/javascript" src="library/libs/js/materialize.min.js"></script>
+<script type="text/javascript" src="library/libs/js/materialize-tags.min.js"></script>
 <script>
 $(".button-collapse").sideNav();
 </script>

@@ -255,6 +255,10 @@ header('Location: /admin.php?general#pagesettings');
 input:not([type]):focus:not([readonly])+label, input[type=text]:focus:not([readonly])+label, input[type=password]:focus:not([readonly])+label, input[type=email]:focus:not([readonly])+label, input[type=url]:focus:not([readonly])+label, input[type=time]:focus:not([readonly])+label, input[type=date]:focus:not([readonly])+label, input[type=datetime]:focus:not([readonly])+label, input[type=datetime-local]:focus:not([readonly])+label, input[type=tel]:focus:not([readonly])+label, input[type=number]:focus:not([readonly])+label, input[type=search]:focus:not([readonly])+label, textarea.materialize-textarea:focus:not([readonly])+label {
     color: #e0e0e0;
 }
+.chip {
+      margin-top: 14px;
+    margin-bottom: 11px;
+}
 </style>       
         
 
@@ -270,40 +274,13 @@ input:not([type]):focus:not([readonly])+label, input[type=text]:focus:not([reado
 </div>
 
 <div class="input-field">
-<input class="chips chips-initial"value="<?php echo cms_seo("meta_keywords");?>" id="keywords" name="meta_keywords" type="text">
+<input value="<?php echo cms_seo("meta_keywords");?>" id="keywords" name="meta_keywords" type="text" data-role="materialtags">
 <label for="keywords">Meta keywords</label>
 </div>
+
+
     <button class="btn waves-effect waves-light grey darken-4" type="submit" name="change_seo_info">Update info</button>
 </form>
-
-<script>
-
-  $('.chips').material_chip();
-  $('.chips-initial').material_chip({
-    data: [{
-      tag: 'Apple',
-    }, {
-      tag: 'Microsoft',
-    }, {
-      tag: 'Google',
-    }],
-  });
-  $('.chips-placeholder').material_chip({
-    placeholder: 'Enter a tag',
-    secondaryPlaceholder: '+Tag',
-  });
-  $('.chips-autocomplete').material_chip({
-    autocompleteOptions: {
-      data: {
-        'Apple': null,
-        'Microsoft': null,
-        'Google': null
-      },
-      limit: Infinity,
-      minLength: 1
-    }
-  });
-        </script>
 
 <?php 
     
